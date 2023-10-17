@@ -1,0 +1,748 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: #ff6188;
+}
+
+body {
+  background-color: #1b1b1b;
+}
+
+.wrapper {
+  background-color: #1d1d1d;
+  max-width: 960px;
+  margin: 50px auto 0;
+}
+
+p {
+  font-family: "muli", sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  border-bottom: 1px solid rgba(78, 78, 78, 0.5);
+  background-color: #1b1b1b;
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: "inter", sans-serif;
+}
+nav .logo {
+  text-decoration: none;
+}
+
+.glitch {
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 50px;
+  color: #f1f1f1;
+  padding: 0 1rem;
+  margin: 0;
+  line-height: 50px;
+  animation: glitch 0.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
+  }
+  15% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
+  }
+  16% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff, -0.05em -0.05em 0 #fffc00;
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff, -0.05em -0.05em 0 #fffc00;
+  }
+  50% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
+  }
+  99% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
+  }
+  100% {
+    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff, -0.04em -0.025em 0 #fffc00;
+  }
+}
+.navbar-menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+}
+.navbar-menu ul li {
+  padding: 0 8px;
+  margin: 0;
+  line-height: 50px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+}
+.navbar-menu ul li:hover a {
+  animation: glitch 0.5s infinite linear alternate-reverse;
+}
+.navbar-menu ul li svg {
+  fill: #f1f1f1;
+}
+.navbar-menu ul li a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+}
+main .single {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #fcfcfa;
+  box-sizing: inherit;
+  padding: 1rem 1rem 0;
+  position: relative;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+main .single .post-info {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+}
+main .single h2 {
+  -webkit-text-size-adjust: 100%;
+  box-sizing: inherit;
+  padding: 0;
+  font-weight: 900;
+  font-family: inter, sans-serif;
+  line-height: 3rem;
+  overflow-wrap: break-word;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.9rem;
+  color: #fcfcfa;
+}
+main .single .date-author {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  overflow-wrap: break-word;
+  box-sizing: inherit;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #fcfcfa;
+}
+main .single .date-author .date {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  color: #fcfcfa;
+  box-sizing: inherit;
+  display: flex;
+  flex-wrap: wrap;
+}
+main .single .date-author .author {
+  --fa-style-family-brands: "Font Awesome 6 Brands";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+  --fa-style-family-classic: "Font Awesome 6 Free";
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  color: #fcfcfa;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main .single .tags {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  overflow-wrap: break-word;
+  color: #fcfcfa;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0 0 1rem;
+  list-style: none;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+main .single .tags li {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  overflow-wrap: break-word;
+  color: #fcfcfa;
+  font-size: 0.8rem;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+main .single .tags li a {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  box-sizing: inherit;
+  padding: 0.1rem 0.5rem;
+  border-radius: 5%;
+  margin: 0.2rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #ffd866;
+  background-color: #343434;
+}
+main .single .tags li a:hover {
+  cursor: pointer;
+  color: #ff6188;
+}
+main .single .content .base-card {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color-scheme: dark;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  pointer-events: auto;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  border: 0 solid black;
+  box-sizing: border-box;
+  display: flex;
+  flex-basis: auto;
+  flex-shrink: 0;
+  list-style: none;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  position: relative;
+  text-decoration: none;
+  z-index: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-bottom-color: rgb(43, 46, 57);
+  border-left-color: rgb(43, 46, 57);
+  border-right-color: rgb(43, 46, 57);
+  border-top-color: rgb(43, 46, 57);
+  padding: 16px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  flex-direction: row;
+  align-items: center;
+  transition-property: all;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  background-color: #1c1c1c;
+  transition-duration: 0.15s;
+  color: white;
+}
+main .single .content .base-card:hover {
+  color: rgb(100, 143, 228);
+}
+main .single .content .base-card .image-icon {
+  -webkit-text-size-adjust: 100%;
+  pointer-events: auto;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  cursor: pointer;
+  user-select: none;
+  align-items: stretch;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0 solid black;
+  box-sizing: border-box;
+  display: flex;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  list-style: none;
+  margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  position: relative;
+  text-decoration: none;
+  z-index: 0;
+  margin-right: 16px;
+}
+main .single .content mark {
+  background-color: transparent;
+}
+main .single .content pre {
+  -webkit-text-size-adjust: 100%;
+  overflow-wrap: break-word;
+  border-spacing: 0;
+  text-align: left;
+  border-collapse: collapse;
+  box-sizing: inherit;
+  white-space: pre;
+  hyphens: none;
+  font: 125%/1.8 Consolas, Monaco, Menlo, dejavu sans mono, bitstream vera sans mono, courier new, lucida console, lucida sans typewriter, liberation mono, nimbus mono l, Monaco, Courier, monospace;
+  font-family: Consolas, Monaco, Menlo, dejavu sans mono, bitstream vera sans mono, courier new, lucida console, lucida sans typewriter, liberation mono, nimbus mono l, Monaco, Courier, monospace;
+  overflow: auto;
+  border-radius: 0.34rem;
+  line-height: 1.5;
+  font-size: 13.8px;
+  direction: ltr;
+  color: #eee;
+  background: #282828;
+  margin: 0;
+  padding: 6px 2px 6px;
+}
+main .single .content pre .hljs-meta {
+  width: 100%;
+}
+main .single .content .script-container {
+  position: relative;
+}
+main .single .content .script-container .copied-to-clipboard {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 15px;
+  font-weight: normal;
+  margin-right: 1.2rem;
+}
+main .single .content .script-container .copy-to-clipboard {
+  float: right;
+  display: none;
+}
+main .single .content .script-container:hover .copy-to-clipboard {
+  display: block;
+  cursor: pointer;
+  color: white;
+}
+main .single .content img {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #fcfcfa;
+  overflow-wrap: break-word;
+  font-size: 1rem;
+  line-height: 1.7;
+  box-sizing: inherit;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 7px !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1) !important;
+  pointer-events: none;
+  display: block;
+  margin: 0 auto 15px;
+  cursor: pointer;
+}
+main .single .content .description {
+  display: inline;
+  font-weight: lighter;
+  line-height: 30px;
+  font-size: 18px;
+  color: #aed581;
+}
+main .single .content p {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #fcfcfa;
+  overflow-wrap: break-word;
+  font-size: 1rem;
+  line-height: 1.7;
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+main .single .content h2 {
+  -webkit-text-size-adjust: 100%;
+  overflow-wrap: break-word;
+  box-sizing: inherit;
+  position: relative;
+  line-height: 1.25;
+  font-family: inter, sans-serif;
+  padding: 0;
+  font-weight: 900;
+  text-rendering: optimizeLegibility;
+  font-size: 1.6rem;
+  margin: 1rem 0;
+  color: #aed581;
+}
+main .single .content ul {
+  padding: 1rem 0;
+  font-weight: bolder;
+}
+main .single .content ul li {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #fcfcfa;
+  overflow-wrap: break-word;
+  font-size: 1rem;
+  line-height: 1.7;
+  list-style: disc outside none;
+  box-sizing: inherit;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;
+}
+main .single .content a {
+  color: #ffd866;
+}
+main .single .content a:hover {
+  text-decoration: none;
+}
+main .single .content p {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #fcfcfa;
+  overflow-wrap: break-word;
+  font-size: 1rem;
+  line-height: 1.7;
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+main .single .content strong {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.tags {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #fcfcfa;
+  box-sizing: inherit;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tags .tag {
+  -webkit-text-size-adjust: 100%;
+  box-sizing: inherit;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  padding: 0.25rem;
+  margin: 0.35rem 0.25rem 0;
+  border: none;
+  border-radius: 0.2rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fcfcfa;
+  background-color: #3c3c3c;
+}
+.tags .tag:hover {
+  color: #ff6188;
+}
+
+.footer-social {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #bdbdbd;
+  box-sizing: inherit;
+  padding: 0.5rem 0;
+  position: sticky;
+  bottom: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  box-sizing: inherit;
+  grid-area: 4/1/5/3;
+  padding: 0 0.5rem;
+  position: relative;
+  color: #bdbdbd;
+  background-color: #1d1d1d;
+}
+footer .bio-social {
+  -webkit-text-size-adjust: 100%;
+  font-size: 1rem;
+  font-family: inter, sans-serif;
+  color: #eee;
+  box-sizing: inherit;
+  width: 100%;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+}
+footer .bio-social a {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  font-family: inter, sans-serif;
+  box-sizing: inherit;
+  text-decoration: none !important;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-start;
+  color: #bdbdbd;
+}
+footer .bio-social a:hover {
+  color: white;
+}
+footer hr {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #bdbdbd;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid #595b5c !important;
+  border-color: #595b5c;
+}
+footer .footer {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #bdbdbd;
+  box-sizing: inherit;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+footer .footer .powered-by {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #bdbdbd;
+  box-sizing: inherit;
+  margin: 0;
+  font-size: 0.8rem;
+  padding: 0.125rem;
+}
+
+.navbar-hide {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    min-height: 100vh;
+  }
+  .desktop {
+    display: none !important;
+  }
+  main {
+    display: block;
+  }
+  nav .navbar-hide {
+    height: 0px;
+    display: block;
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    color: #fcfcfa;
+    direction: ltr;
+    box-sizing: inherit;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    overflow: hidden;
+    transition: all 0.15s ease-out;
+    background-color: #1b1b1b;
+    border-bottom: 2px solid rgba(78, 78, 78, 0.5);
+  }
+  nav .navbar-hide ul {
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    color: #fcfcfa;
+    direction: ltr;
+    unicode-bidi: isolate;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  nav .navbar-hide ul li {
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    direction: ltr;
+    list-style: none;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    color: #fcfcfa;
+  }
+  nav .navbar-hide ul li:hover {
+    color: #ff6188;
+    background-color: #2a2a2a;
+  }
+  nav .navbar-hide ul li a {
+    -webkit-text-size-adjust: 100%;
+    direction: ltr;
+    list-style: none;
+    box-sizing: inherit;
+    height: 100%;
+    font-family: inter, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: inherit;
+    text-decoration: none !important;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  nav .navbar-display {
+    display: block;
+    height: 250px;
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    color: #fcfcfa;
+    direction: ltr;
+    box-sizing: inherit;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    overflow: hidden;
+    transition: all 0.15s ease-out;
+    background-color: #1b1b1b;
+    border-bottom: 2px solid rgba(78, 78, 78, 0.5);
+  }
+  nav .navbar-display ul {
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    color: #fcfcfa;
+    direction: ltr;
+    unicode-bidi: isolate;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  nav .navbar-display ul li {
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    direction: ltr;
+    list-style: none;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    color: #fcfcfa;
+  }
+  nav .navbar-display ul li:hover {
+    color: #ff6188;
+    background-color: #2a2a2a;
+  }
+  nav .navbar-display ul li a {
+    -webkit-text-size-adjust: 100%;
+    direction: ltr;
+    list-style: none;
+    box-sizing: inherit;
+    height: 100%;
+    font-family: inter, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: inherit;
+    text-decoration: none !important;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  nav .nav-burger {
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    direction: ltr;
+    box-sizing: inherit;
+    cursor: pointer;
+    margin-left: auto;
+    height: 50px;
+    width: 35px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-decoration: none;
+    color: #ffd866;
+    animation: slide-in-down 0.5s 0s 1 ease both;
+    background: #1b1b1b;
+  }
+  nav .nav-burger.is-active {
+    cursor: pointer;
+    background: #1b1b1b;
+    display: block;
+    color: #ff6188;
+    text-decoration: none !important;
+  }
+  nav .nav-burger.is-active span {
+    background-color: #ffd866;
+  }
+  nav .nav-burger.is-active span:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
+  }
+  nav .nav-burger.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+  nav .nav-burger.is-active span:nth-child(3) {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+  nav .nav-burger:hover span {
+    background-color: #ffd866 !important;
+  }
+  nav .nav-burger span {
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    direction: ltr;
+    cursor: pointer;
+    color: #ffd866;
+    box-sizing: inherit;
+    border-radius: 1rem;
+    display: block;
+    height: 2px;
+    left: calc(50% - 8px);
+    position: absolute;
+    transform-origin: center;
+    transition-duration: 86ms;
+    transition-property: background-color, opacity, transform;
+    transition-timing-function: ease-out;
+    width: 16px;
+    background-color: #fcfcfa;
+  }
+  nav .nav-burger span:nth-child(1) {
+    top: calc(50% - 6px);
+  }
+  nav .nav-burger span:nth-child(2) {
+    top: calc(50% - 1px);
+  }
+  nav .nav-burger span:nth-child(3) {
+    top: calc(50% + 4px);
+  }
+  .post-info {
+    display: block !important;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

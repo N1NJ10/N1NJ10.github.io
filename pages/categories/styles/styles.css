@@ -1,0 +1,517 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: #ff6188;
+}
+
+body {
+  background-color: #1b1b1b;
+}
+
+.wrapper {
+  background-color: #1d1d1d;
+  max-width: 960px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+p {
+  font-family: "muli", sans-serif;
+}
+
+nav {
+  border-bottom: 1px solid rgba(78, 78, 78, 0.5);
+  width: 100%;
+  z-index: 10;
+  position: sticky;
+  background-color: #1b1b1b;
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: "inter", sans-serif;
+}
+nav .logo {
+  text-decoration: none;
+}
+
+#active {
+  color: #ff6188;
+}
+
+.glitch {
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 50px;
+  color: #f1f1f1;
+  padding: 0 1rem;
+  margin: 0;
+  line-height: 50px;
+  animation: glitch 0.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
+  }
+  15% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
+  }
+  16% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff, -0.05em -0.05em 0 #fffc00;
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff, -0.05em -0.05em 0 #fffc00;
+  }
+  50% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
+  }
+  99% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
+  }
+  100% {
+    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff, -0.04em -0.025em 0 #fffc00;
+  }
+}
+.navbar-menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+}
+.navbar-menu ul li {
+  padding: 0 8px;
+  margin: 0;
+  line-height: 50px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+}
+.navbar-menu ul li:hover a {
+  animation: glitch 0.5s infinite linear alternate-reverse;
+}
+.navbar-menu ul li svg {
+  fill: #f1f1f1;
+}
+.navbar-menu ul li a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+}
+
+header {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #fcfcfa;
+  box-sizing: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  grid-area: 2/1/3/3;
+}
+header h3 {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  box-sizing: inherit;
+  padding: 0;
+  font-size: 3rem;
+  margin: 2rem 0;
+  font-family: inter, sans-serif;
+  color: #ddd;
+  animation: glitch 0.5s infinite linear alternate-reverse;
+  text-shadow: 1.2px 1.2px 0 #ddd, 2.4px 2.4px 0 #272727, 3.6px 3.6px 0 #313131, 4.8px 4.8px 0 #3c3c3c;
+}
+
+main {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #fcfcfa;
+  box-sizing: inherit;
+  grid-area: 3/1/4/3;
+  position: relative;
+  width: 100%;
+  padding: 2rem 1rem 0;
+}
+main .tags {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #fcfcfa;
+  box-sizing: inherit;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .tags-root {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfa;
+  box-sizing: inherit;
+  position: sticky;
+  top: 50px;
+  background-color: #1d1d1d;
+}
+main .tags-root .tag {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  box-sizing: inherit;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+  display: inline-block;
+  color: #bdbdbd;
+}
+main .tags-root .tag .is-tags {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  font-size: 0.8rem;
+  box-sizing: inherit;
+  text-decoration: none !important;
+  border-radius: 0.175rem;
+  color: #ab9df2;
+  background-color: #3c3c3c;
+  padding: 0.125rem 0 0.125rem 0.25rem;
+}
+main .tags-root .tag .is-tags .taxo__num {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  font-size: 0.8rem;
+  unicode-bidi: isolate;
+  box-sizing: inherit;
+  color: #fcfcfa;
+  background-color: #1b1b1b;
+  padding: 0.125rem 0.25rem;
+  border-top-right-radius: 0.175rem;
+  border-bottom-right-radius: 0.175rem;
+}
+main .tags-root .tag .is-tags .taxo__text:hover {
+  text-decoration: underline;
+}
+main .tags-root .tags-title {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #fcfcfa;
+  box-sizing: inherit;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+main .tags-root .tags-title a {
+  -webkit-text-size-adjust: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inter, sans-serif;
+  text-decoration: none;
+  color: #bdbdbd;
+  cursor: pointer;
+}
+main .tags-root .tags-title a:hover {
+  color: #ff6188;
+}
+
+.footer-social {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #bdbdbd;
+  box-sizing: inherit;
+  padding: 0.5rem 0;
+  position: sticky;
+  bottom: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  box-sizing: inherit;
+  grid-area: 4/1/5/3;
+  padding: 0 0.5rem;
+  position: relative;
+  color: #bdbdbd;
+  background-color: #1d1d1d;
+}
+footer .bio-social {
+  -webkit-text-size-adjust: 100%;
+  font-size: 1rem;
+  font-family: inter, sans-serif;
+  color: #eee;
+  box-sizing: inherit;
+  width: 100%;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+}
+footer .bio-social a {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  font-family: inter, sans-serif;
+  box-sizing: inherit;
+  text-decoration: none !important;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-start;
+  color: #bdbdbd;
+}
+footer .bio-social a:hover {
+  color: white;
+}
+footer hr {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #bdbdbd;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid #595b5c !important;
+  border-color: #595b5c;
+}
+footer .footer {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #bdbdbd;
+  box-sizing: inherit;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+footer .footer .powered-by {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #bdbdbd;
+  box-sizing: inherit;
+  margin: 0;
+  font-size: 0.8rem;
+  padding: 0.125rem;
+}
+
+.navbar-hide {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    min-height: 100vh;
+  }
+  .desktop {
+    display: none !important;
+  }
+  main {
+    display: block;
+  }
+  main aside {
+    display: none;
+  }
+  nav .navbar-hide {
+    height: 0px;
+    display: block;
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    color: #fcfcfa;
+    direction: ltr;
+    box-sizing: inherit;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    overflow: hidden;
+    transition: all 0.15s ease-out;
+    background-color: #1b1b1b;
+    border-bottom: 2px solid rgba(78, 78, 78, 0.5);
+  }
+  nav .navbar-hide ul {
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    color: #fcfcfa;
+    direction: ltr;
+    unicode-bidi: isolate;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  nav .navbar-hide ul li {
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    direction: ltr;
+    list-style: none;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    color: #fcfcfa;
+  }
+  nav .navbar-hide ul li:hover {
+    color: #ff6188;
+    background-color: #2a2a2a;
+  }
+  nav .navbar-hide ul li a {
+    -webkit-text-size-adjust: 100%;
+    direction: ltr;
+    list-style: none;
+    box-sizing: inherit;
+    height: 100%;
+    font-family: inter, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: inherit;
+    text-decoration: none !important;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  nav .navbar-display {
+    display: block;
+    height: 250px;
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    color: #fcfcfa;
+    direction: ltr;
+    box-sizing: inherit;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    overflow: hidden;
+    transition: all 0.15s ease-out;
+    background-color: #1b1b1b;
+    border-bottom: 2px solid rgba(78, 78, 78, 0.5);
+  }
+  nav .navbar-display ul {
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    color: #fcfcfa;
+    direction: ltr;
+    unicode-bidi: isolate;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  nav .navbar-display ul li {
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    direction: ltr;
+    list-style: none;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    color: #fcfcfa;
+  }
+  nav .navbar-display ul li:hover {
+    color: #ff6188;
+    background-color: #2a2a2a;
+  }
+  nav .navbar-display ul li a {
+    -webkit-text-size-adjust: 100%;
+    direction: ltr;
+    list-style: none;
+    box-sizing: inherit;
+    height: 100%;
+    font-family: inter, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: inherit;
+    text-decoration: none !important;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  nav .nav-burger {
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    direction: ltr;
+    box-sizing: inherit;
+    cursor: pointer;
+    margin-left: auto;
+    height: 50px;
+    width: 35px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-decoration: none;
+    color: #ffd866;
+    animation: slide-in-down 0.5s 0s 1 ease both;
+    background: #1b1b1b;
+  }
+  nav .nav-burger.is-active {
+    cursor: pointer;
+    background: #1b1b1b;
+    display: block;
+    color: #ff6188;
+    text-decoration: none !important;
+  }
+  nav .nav-burger.is-active span {
+    background-color: #ffd866;
+  }
+  nav .nav-burger.is-active span:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
+  }
+  nav .nav-burger.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+  nav .nav-burger.is-active span:nth-child(3) {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+  nav .nav-burger:hover span {
+    background-color: #ffd866 !important;
+  }
+  nav .nav-burger span {
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    direction: ltr;
+    cursor: pointer;
+    color: #ffd866;
+    box-sizing: inherit;
+    border-radius: 1rem;
+    display: block;
+    height: 2px;
+    left: calc(50% - 8px);
+    position: absolute;
+    transform-origin: center;
+    transition-duration: 86ms;
+    transition-property: background-color, opacity, transform;
+    transition-timing-function: ease-out;
+    width: 16px;
+    background-color: #fcfcfa;
+  }
+  nav .nav-burger span:nth-child(1) {
+    top: calc(50% - 6px);
+  }
+  nav .nav-burger span:nth-child(2) {
+    top: calc(50% - 1px);
+  }
+  nav .nav-burger span:nth-child(3) {
+    top: calc(50% + 4px);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

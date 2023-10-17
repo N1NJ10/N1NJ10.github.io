@@ -1,0 +1,1020 @@
+// Variables
+$main-color: #1b1b1b;
+$secondary-color: #f1f1f1;
+$button-color: #ffd866;
+$background-color: #1d1d1d;
+
+// Reset and common styles
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Selection styles
+*::selection {
+  background: #ff6188;
+}
+
+// Body styles
+body {
+  background-color: $main-color;
+}
+
+// Wrapper styles
+.wrapper {
+  background-color: $background-color;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+// Paragraph styles
+p {
+  font-family: 'muli', sans-serif;
+}
+
+// Navigation styles
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  border-bottom: 1px solid rgba(78, 78, 78, 0.5);
+  background-color: $main-color;
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: 'inter', sans-serif;
+
+  .logo {
+    text-decoration: none;
+  }
+}
+
+
+.glitch {
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 50px;
+  color: $secondary-color;
+  padding: 0 1rem;
+  margin: 0;
+  line-height: 50px;
+  animation: glitch 0.5s infinite linear alternate-reverse;
+
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+    0.025em 0.04em 0 #fffc00;
+  }
+  15% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+    0.025em 0.04em 0 #fffc00;
+  }
+  16% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+    -0.05em -0.05em 0 #fffc00;
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+    -0.05em -0.05em 0 #fffc00;
+  }
+  50% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+    0 -0.04em 0 #fffc00;
+  }
+  99% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+    0 -0.04em 0 #fffc00;
+  }
+  100% {
+    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+    -0.04em -0.025em 0 #fffc00;
+  }
+}
+
+
+.hr-fade {
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  box-sizing: inherit;
+  padding: 0;
+  border: 0;
+  margin: 1.5rem 0;
+  height: 1px;
+  width: 100%;
+  color: #595b5c;
+  background-image: linear-gradient(90deg, transparent, #595B5C 50%, transparent 100%);
+}
+
+#active {
+  color: #ff6188;
+}
+
+.navbar-menu {
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 0 8px;
+      margin: 0;
+      line-height: 50px;
+      color: white;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      display: flex;
+
+      &:hover {
+        a {
+          animation: glitch 0.5s infinite linear alternate-reverse;
+        }
+      }
+
+      svg {
+        fill: $secondary-color;
+      }
+
+      a {
+        text-decoration: none;
+        color: $secondary-color;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+
+
+      }
+    }
+  }
+}
+
+// Header styles
+header {
+  width: 100%;
+  height: 150px;
+  margin-top: 50px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  h2 {
+    font-size: 34px;
+    color: $secondary-color;
+    font-weight: 700;
+    line-height: 1.1;
+    font-family: "inter", sans-serif;
+  }
+
+  p {
+    color: $secondary-color;
+    font-family: 'muli', sans-serif;
+  }
+}
+
+time {
+  font-weight: bolder;
+}
+
+// Main content styles
+
+.bio-social {
+  -webkit-text-size-adjust: 100%;
+  font-size: 1rem;
+  font-family: inter, sans-serif;
+  color: #eee;
+  box-sizing: inherit;
+  width: 100%;
+  margin-top: .5rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  a {
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    font-family: inter, sans-serif;
+    box-sizing: inherit;
+    text-decoration: none !important;
+    padding: .5rem;
+    border-radius: .125rem;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-start;
+    color: #bdbdbd;
+  }
+
+  a:hover {
+    color: white;
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: 266px 1fr;
+  grid-column-gap: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+
+  aside {
+    height: max-content;
+    margin-top: 16px;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 255px;
+    justify-content: center;
+    align-items: start;
+    position: sticky;
+    top: 50px;
+
+    .bio {
+      width: 100%;
+    }
+
+    .categories-root {
+      top: 50px;
+      color: #fcfcfa;
+      box-sizing: inherit;
+      background-color: #1d1d1d;
+      position: sticky;
+
+
+      .tag {
+        -webkit-text-size-adjust: 100%;
+        font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+        box-sizing: inherit;
+        margin-right: .25rem;
+        margin-bottom: .25rem;
+        font-size: .8rem;
+        display: inline-block;
+        color: #bdbdbd;
+
+        .is-categories {
+          -webkit-text-size-adjust: 100%;
+          font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+          font-size: .8rem;
+          box-sizing: inherit;
+          text-decoration: none !important;
+          border-radius: .175rem;
+          color: #ab9df2;
+          background-color: #3c3c3c;
+          padding: .125rem 0 .125rem .25rem;
+
+          .taxo__num {
+            -webkit-text-size-adjust: 100%;
+            font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+            font-size: .8rem;
+            unicode-bidi: isolate;
+            box-sizing: inherit;
+            color: #fcfcfa;
+            background-color: #1b1b1b;
+            padding: .125rem .25rem;
+            border-top-right-radius: .175rem;
+            border-bottom-right-radius: .175rem;
+          }
+
+          .taxo__text {
+            &:hover {
+              text-decoration: underline;
+            }
+
+          }
+
+
+        }
+
+      }
+
+      .categories-title {
+        -webkit-text-size-adjust: 100%;
+        font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+        color: #fcfcfa;
+        box-sizing: inherit;
+        font-size: 1rem;
+        display: block;
+        margin-bottom: .25rem;
+
+        a {
+          -webkit-text-size-adjust: 100%;
+          font-size: 1rem;
+          font-weight: 700;
+          font-family: inter, sans-serif;
+          text-decoration: none;
+          color: #bdbdbd;
+
+          &:hover {
+            color: #ff6188;
+          }
+
+        }
+      }
+    }
+
+
+    .sidebar-recent {
+      -webkit-text-size-adjust: 100%;
+      font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+      color: #fcfcfa;
+      box-sizing: inherit;
+      padding: .25rem;
+
+      .sidebar-recent__title {
+        -webkit-text-size-adjust: 100%;
+        box-sizing: inherit;
+        font-family: inter, sans-serif;
+        font-weight: 700;
+        font-size: .95rem;
+        text-decoration: none;
+        color: #aed581;
+      }
+
+      ul {
+        -webkit-text-size-adjust: 100%;
+        color: #fcfcfa;
+        box-sizing: inherit;
+        padding: 0;
+        list-style: none;
+        margin-left: .25rem;
+
+        li {
+          -webkit-text-size-adjust: 100%;
+          font-family: muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+          color: #fcfcfa;
+          list-style: disc;
+          margin-left: 1rem;
+
+          a {
+            -webkit-text-size-adjust: 100%;
+            list-style: none;
+            box-sizing: inherit;
+            font-family: sans-serif;
+            font-size: .95rem;
+            text-decoration: none;
+            color: #fcfcfa;
+
+            &:hover {
+              color: #ff6188;
+            }
+
+          }
+
+        }
+      }
+    }
+
+    .profilePic {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      margin: 16px 12.5px;
+    }
+
+    img {
+      border-radius: 0.25rem;
+      width: 100%;
+      max-width: 250px;
+
+    }
+
+    .special-hr {
+      -webkit-text-size-adjust: 100%;
+      font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+      font-family: inter, sans-serif;
+      box-sizing: inherit;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      border-radius: .5rem;
+      width: 100%;
+      height: 7px;
+      background-size: 10px 10px;
+      color: #595b5c;
+      background-image: linear-gradient(-45deg, transparent, transparent 25%, currentColor 25%, currentColor 50%, transparent 50%, transparent 75%, currentColor 75%);
+      border-color: #595b5c;
+    }
+
+    h3 {
+      -webkit-text-size-adjust: 100%;
+      font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+      color: #eee;
+      box-sizing: inherit;
+      font-weight: 700;
+      letter-spacing: 1px;
+
+      font-size: 26px;
+      margin-top: .8rem;
+    }
+
+    .bio-description {
+      -webkit-text-size-adjust: 100%;
+      color: #eee;
+      box-sizing: inherit;
+      margin: .5rem 0;
+      font-size: 14px;
+    }
+
+    .bio-info {
+      -webkit-text-size-adjust: 100%;
+      font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+      font-family: inter, sans-serif;
+      color: #eee;
+      box-sizing: inherit;
+      font-size: 14px;
+      margin: .1rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      a {
+        color: $button-color;
+        text-decoration: none;
+        font-weight: normal;
+        font-family: muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+
+        &:hover {
+          color: #ff6188;
+        }
+      }
+
+      svg {
+        -webkit-text-size-adjust: 100%;
+        font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+        font-family: inter, sans-serif;
+        color: #eee;
+        font-size: 14px;
+        height: 20px;
+        width: 20px;
+        margin-right: .5rem;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    }
+
+
+    .seperator {
+      -webkit-text-size-adjust: 100%;
+      font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+      box-sizing: inherit;
+      padding: 0;
+      border: 0;
+      margin: 1.5rem 0;
+      height: 1px;
+      width: 100%;
+      color: #595b5c;
+      background-image: linear-gradient(90deg, transparent, #595B5C 50%, transparent 100%);
+      border-color: #595b5c;
+    }
+  }
+
+  .main-posts {
+    padding: 0 16px;
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      -webkit-text-size-adjust: 100%;
+      font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+      color: #ffd866;
+      box-sizing: inherit;
+      height: auto;
+      max-width: 100%;
+      object-fit: inherit;
+      border-radius: 5px !important;
+      animation: slide-in-left .2s .6s 1 ease-in both;
+    }
+
+    .post {
+      display: flex;
+      gap: 10px;
+      -webkit-text-size-adjust: 100%;
+      font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+      color: #fcfcfa;
+      box-sizing: inherit;
+      display: flex;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      justify-content: space-between;
+
+
+      .pic {
+        -webkit-text-size-adjust: 100%;
+        font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+        color: #fcfcfa;
+        box-sizing: inherit;
+        border-radius: .25rem;
+        padding: .25rem;
+        transition: all .2s ease-out;
+        min-width: 130px;
+        overflow: hidden;
+        align-self: center;
+        max-width: 25%;
+        margin-left: .5rem;
+      }
+    }
+  }
+
+  .pagination {
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    color: #fcfcfa;
+    box-sizing: inherit;
+    list-style: none;
+    border-radius: .25rem;
+    margin: 2rem 1rem;
+    padding: .5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1b1b1b;
+
+    .disabled {
+      -webkit-text-size-adjust: 100%;
+      font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+      list-style: none;
+      box-sizing: inherit;
+      text-decoration: none;
+      font-size: 1.25rem;
+      padding: .5rem .75rem;
+      color: #fcfcfa;
+    }
+
+    li {
+      -webkit-text-size-adjust: 100%;
+      font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+      color: #fcfcfa;
+      list-style: none;
+      box-sizing: inherit;
+      margin: 0;
+      padding: 0;
+      border-radius: .25rem;
+
+
+      a {
+        -webkit-text-size-adjust: 100%;
+        font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+        list-style: none;
+        box-sizing: inherit;
+        text-decoration: none;
+        font-size: 1.25rem;
+        padding: .5rem .75rem;
+        color: #fcfcfa;
+
+
+        &:hover {
+          color: #ff6188;
+        }
+      }
+    }
+
+    .active {
+      -webkit-text-size-adjust: 100%;
+      font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+      color: #fcfcfa;
+      list-style: none;
+      box-sizing: inherit;
+      margin: 0;
+      padding: 0;
+      border-radius: .25rem;
+      font-weight: 700;
+      background-color: #1b1b1b;
+
+      a {
+        -webkit-text-size-adjust: 100%;
+        font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+        list-style: none;
+        font-weight: 700;
+        box-sizing: inherit;
+        text-decoration: none;
+        font-size: 1.25rem;
+        padding: .5rem .75rem;
+        color: #ff6188;
+      }
+    }
+  }
+}
+
+
+.title {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #fcfcfa;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+
+
+  .icon {
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    color: #fcfcfa;
+    font-size: 24px;
+    box-sizing: inherit;
+    max-width: 100%;
+    object-fit: inherit;
+    height: 24px;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+
+  a {
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    font-size: 24px;
+    box-sizing: inherit;
+    text-decoration: none;
+    font-family: inter, sans-serif;
+    font-weight: 700;
+    word-break: break-word;
+    color: #ffd866;
+
+    &:hover {
+      color: #ff6188;
+    }
+
+  }
+}
+
+.date-author {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: .8rem;
+  color: #fcfcfa;
+
+  .author {
+    font-weight: bold;
+    font-family: muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  }
+}
+
+.tags {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #fcfcfa;
+  box-sizing: inherit;
+  margin-top: .5rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  .tag {
+    -webkit-text-size-adjust: 100%;
+    box-sizing: inherit;
+    font-size: .8rem;
+    line-height: .8rem;
+    padding: .25rem;
+    margin: .35rem .25rem 0;
+    border: none;
+    border-radius: .2rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fcfcfa;
+    background-color: #3c3c3c;
+
+    &:hover {
+      color: #ff6188;
+    }
+  }
+
+}
+
+.content {
+  -webkit-text-size-adjust: 100%;
+  font-family: muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #fcfcfa;
+  box-sizing: inherit;
+  font-size: 1rem;
+  margin-top: 1rem;
+  line-height: 1.7rem;
+  font-weight: normal;
+}
+
+article hr {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #fcfcfa;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid #595b5c;
+  margin-bottom: 1.5rem;
+  opacity: 90%;
+  border-color: #595b5c;
+}
+
+.footer-social {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #bdbdbd;
+  box-sizing: inherit;
+  padding: .5rem 0;
+  position: sticky;
+  bottom: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+
+footer {
+  -webkit-text-size-adjust: 100%;
+  font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  box-sizing: inherit;
+  grid-area: 4/1/5/3;
+  padding: 0 .5rem;
+  position: relative;
+  color: #bdbdbd;
+  background-color: #1d1d1d;
+
+  .bio-social {
+    width: auto;
+  }
+
+  hr {
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    color: #bdbdbd;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid #595b5c !important;
+    border-color: #595b5c;
+  }
+
+  .footer {
+    -webkit-text-size-adjust: 100%;
+    font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    color: #bdbdbd;
+    box-sizing: inherit;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: .5rem 0;
+
+    .powered-by {
+      -webkit-text-size-adjust: 100%;
+      font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+      color: #bdbdbd;
+      box-sizing: inherit;
+      margin: 0;
+      font-size: .8rem;
+      padding: .125rem;
+    }
+  }
+}
+
+.navbar-hide {
+  display: none;
+}
+
+//media query
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    min-height: 100vh;
+  }
+  .desktop {
+    display: none !important;
+  }
+  main {
+    display: block;
+
+    aside {
+      display: none;
+    }
+  }
+  nav {
+
+    .navbar-hide {
+      height: 0px;
+      display: block;
+      -webkit-text-size-adjust: 100%;
+      font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+      color: #fcfcfa;
+      direction: ltr;
+      box-sizing: inherit;
+      width: 100%;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      overflow: hidden;
+      transition: all .15s ease-out;
+      background-color: #1b1b1b;
+      border-bottom: 2px solid rgba(78, 78, 78, .5);
+
+      ul {
+        -webkit-text-size-adjust: 100%;
+        font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+        color: #fcfcfa;
+        direction: ltr;
+        unicode-bidi: isolate;
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          -webkit-text-size-adjust: 100%;
+          font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+          direction: ltr;
+          list-style: none;
+          box-sizing: inherit;
+          margin: 0;
+          padding: 0;
+          height: 50px;
+          color: #fcfcfa;
+
+          &:hover {
+            color: #ff6188;
+            background-color: #2a2a2a;
+          }
+
+          a {
+            -webkit-text-size-adjust: 100%;
+            direction: ltr;
+            list-style: none;
+            box-sizing: inherit;
+            height: 100%;
+            font-family: inter, sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: inherit;
+            text-decoration: none !important;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+
+    .navbar-display {
+      display: block;
+      height: 250px;
+      -webkit-text-size-adjust: 100%;
+      font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+      color: #fcfcfa;
+      direction: ltr;
+      box-sizing: inherit;
+      width: 100%;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      overflow: hidden;
+      transition: all .15s ease-out;
+      background-color: #1b1b1b;
+      border-bottom: 2px solid rgba(78, 78, 78, .5);
+
+      ul {
+        -webkit-text-size-adjust: 100%;
+        font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+        color: #fcfcfa;
+        direction: ltr;
+        unicode-bidi: isolate;
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          -webkit-text-size-adjust: 100%;
+          font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+          direction: ltr;
+          list-style: none;
+          box-sizing: inherit;
+          margin: 0;
+          padding: 0;
+          height: 50px;
+          color: #fcfcfa;
+
+          &:hover {
+            color: #ff6188;
+            background-color: #2a2a2a;
+          }
+
+          a {
+            -webkit-text-size-adjust: 100%;
+            direction: ltr;
+            list-style: none;
+            box-sizing: inherit;
+            height: 100%;
+            font-family: inter, sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: inherit;
+            text-decoration: none !important;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+
+    .nav-burger {
+      -webkit-text-size-adjust: 100%;
+      font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+      direction: ltr;
+      box-sizing: inherit;
+      cursor: pointer;
+      margin-left: auto;
+      height: 50px;
+      width: 35px;
+      position: absolute;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      text-decoration: none;
+      color: #ffd866;
+      animation: slide-in-down .5s 0s 1 ease both;
+      background: #1b1b1b;
+
+      &.is-active {
+        cursor: pointer;
+        background: #1b1b1b;
+        display: block;
+        color: #ff6188;
+        text-decoration: none !important;
+
+        span {
+          background-color: #ffd866;
+
+          &:nth-child(1) {
+            transform: translateY(5px) rotate(45deg);
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:nth-child(3) {
+            transform: translateY(-5px) rotate(-45deg);
+          }
+        }
+
+      }
+
+      &:hover {
+        span {
+          background-color: #ffd866 !important;
+        }
+      }
+
+      span {
+        -webkit-text-size-adjust: 100%;
+        font: 125%/1.4 muli, sans-serif, muli, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+        direction: ltr;
+        cursor: pointer;
+        color: #ffd866;
+        box-sizing: inherit;
+        border-radius: 1rem;
+        display: block;
+        height: 2px;
+        left: calc(50% - 8px);
+        position: absolute;
+        transform-origin: center;
+        transition-duration: 86ms;
+        transition-property: background-color, opacity, transform;
+        transition-timing-function: ease-out;
+        width: 16px;
+        background-color: #fcfcfa;
+
+        &:nth-child(1) {
+          top: calc(50% - 6px);
+        }
+
+        &:nth-child(2) {
+          top: calc(50% - 1px);
+        }
+
+        &:nth-child(3) {
+          top: calc(50% + 4px);
+        }
+
+
+      }
+    }
+  }
+}
