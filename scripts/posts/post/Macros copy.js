@@ -255,7 +255,7 @@ const newPost = {
     </a>\
     \</p>
     `,
-    description: 'Hey there in this article I will show you  some ways that you can exploit Windows devices using Macros in a stealthy way that undetectable on windowsdefender , Firewall,l and the user',
+    description: 'Hey there in this article I will show you  some ways that you can exploit Windows devices using Macros in a stealthy way that undetectable on windowsdefender , Firewall and the user',
     date: new Date(1901, 6, 2),
     previewPicture: '/pages/Photos/Macro.jpg',
     tags: ['ECPTX'],
