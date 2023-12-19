@@ -1,8 +1,9 @@
 import Macros from "./post/Macros.js";
-
+import Broker from "./post/Broker.js"
 
 const posts = [
     Macros,
+    Broker,
     
     ];
 
