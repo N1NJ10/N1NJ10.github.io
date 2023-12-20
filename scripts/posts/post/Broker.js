@@ -8,7 +8,7 @@ const newPost = {
     <ul>
     <pre><code>
     ┌──(root㉿N1NJ10)-[~]
-    └─# nmap -Pn --disable-arp-ping -n -sV --min-parallelism 64 10.10.11.245 -p 22,80
+    └─# nmap -Pn --disable-arp-ping -n -sV --min-parallelism 64 10.10.11.245
     Starting Nmap 7.94SVN ( https://nmap.org ) at 2023-12-18 12:46 EST
     Nmap scan report for 10.10.11.245
     Host is up (0.29s latency).
