@@ -1,5 +1,5 @@
 const newPost = {
-    title: 'Broker',
+    title: 'Surveillance',
     body: `
     <ul>
     <li><h1>Enumeration</h1>
@@ -517,10 +517,10 @@ PRIMARY_SITE_URL=http://surveillance.htb/
     <p>> See you in another great writeup 😉</strong></p>
     
     `,
-    description: 'Broker is an easy difficulty `Linux` machine hosting a version of `Apache ActiveMQ`. Enumerating the version of `Apache ActiveMQ` shows that it is vulnerable to `Unauthenticated Remote Code Execution`, which is leveraged to gain user access on the target. Post-exploitation enumeration reveals that the system has a `sudo` misconfiguration allowing the `activemq` user to execute `sudo /usr/sbin/nginx`, which is similar to the recent `Zimbra` disclosure and is leveraged to gain `root` access. ',
+    description: 'Let’s see how to CTF the Surveillance HTB',
     date: new Date(2023, 11, 15),
     previewPicture: '/pages/Photos/BROKER.png',
-    tags: ['HTB','CTF','Linux','CVE'],
+    tags: ['htb','ctf','linux','cve'],
     author: 'N1NJ10',
     category: 'CTF'
 };
