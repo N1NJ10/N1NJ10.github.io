@@ -286,7 +286,7 @@ const newPost = {
     
     <p><strong>LinkedIn:-</strong> <a href="https://www.linkedin.com/in/fadymoheb"><strong>https://www.linkedin.com/in/fadymoheb</strong></a></p>
     <p><strong>Facebook:-</strong> <a href="https://www.facebook.com/FADYMo7eB"><strong>https://www.facebook.com/FADYMo7eB</strong></a></p>
-    <p><strong>Twitter:-</strong> <a href="https://twitter.com/FadyMo7eb?s=09"><strong>https://twitter.com/FadyMo7eb?s=09</strong></a></p>
+    <p><strong>Twitter:-</strong> <a href="https://twitter.com/N1NJ1O"><strong>https://twitter.com/N1NJ1O</strong></a></p>
     <p><strong>Tryhackme:-</strong> <a href="https://tryhackme.com/p/FadyMoheb"><strong>https://tryhackme.com/p/FadyMoheb</strong></a></p>
     <p><strong>See you in another great writeup 😉</strong><a href="https://medium.com/tag/reverse-engineering?source=post\_page-----59e1120bde30---------------reverse\_engineering-----------------">\
     </a>\
