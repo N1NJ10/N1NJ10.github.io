@@ -645,7 +645,7 @@ const newPost = {
     `,
     description: 'Authority is a good Windows domain controller machine from HTB , It\'s a real-world machine and I like it  ',
     date: new Date(2024, 1, 1),
-    previewPicture: '../photos/Authority.png',
+    previewPicture: '/pages/Photos/Authority.png',
     tags: ['htb','windows','ad','ctf'],
     author: 'N1NJ10',
     category: 'ctf'
