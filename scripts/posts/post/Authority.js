@@ -643,7 +643,7 @@ const newPost = {
     <p>> See you in another great writeup 😉</strong></p>
 
     `,
-    description: 'Authority is a medium-difficulty Windows machine that highlights the dangers of misconfigurations, password reuse, storing credentials on shares, and demonstrates how default settings in Active Directory (such as the ability for all domain users to add up to 10 computers to the domain) can be combined with other issues (vulnerable AD CS certificate templates) to take over a domain.',
+    description: 'Authority is a good Windows domain controller machine from HTB , It\'s a real-world machine and I like it  ',
     date: new Date(2024, 1, 1),
     previewPicture: '../photos/Macro.png',
     tags: ['htb','windows','ad','ctf'],
