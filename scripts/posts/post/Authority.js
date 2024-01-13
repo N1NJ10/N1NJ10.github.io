@@ -389,7 +389,7 @@ const newPost = {
     <ul>
     <pre><code>
     ┌──(root㉿N1NJ10)-[~/Downloads/tools/Certipy/certipy]
-    └─# python3 [entry.py](http://entry.py/) find -u svc_ldap@authority.htb -p 'lDaP_1n_th3_cle4r!' -dc-ip 10.10.11.222 -vulnerable
+    └─# python3 certipy.py find -u svc_ldap@authority.htb -p 'lDaP_1n_th3_cle4r!' -dc-ip 10.10.11.222 -vulnerable
     Certipy v4.8.2 - by Oliver Lyak (ly4k)
 
     [*] Finding certificate templates
