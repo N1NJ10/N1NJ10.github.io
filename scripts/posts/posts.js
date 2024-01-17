@@ -11,12 +11,8 @@ const posts = [
     Authority,
     Active,
     ECPPT,
-    auto,
     F5,
-    ntlm,
     SQL,
-    poison,
-    arp,
     ];
 
 
