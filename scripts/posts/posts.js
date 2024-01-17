@@ -7,7 +7,7 @@ import auto from "./post/Auto_Login.js"
 import F5 from "./post/F5.js"
 import ntlm from "./post/ntlm.js"
 import SQL from "./post/SQL.js"
-import poison from "./post/poison.js"
+import poison from "./post/poison.js"  
 import arp from "./post/arp.js"
 
 const posts = [
