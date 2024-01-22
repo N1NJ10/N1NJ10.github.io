@@ -1,4 +1,4 @@
-import Macros from "./post/Macros.js";
+import Macros from "./post/Macros.js"
 import Broker from "./post/Broker.js"
 import Authority from "./post/Authority.js"
 import Active from "./post/Active.js"
