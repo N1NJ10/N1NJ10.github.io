@@ -1,16 +1,7 @@
 import Macros from "./post/Macros.js"
-import Authority from "./post/Authority.js"
-import Active from "./post/Active.js"
-import ECPPT from "./post/Ecppt_The_honest.js"
-import F5 from "./post/F5.js"
-import SQL from "./post/SQL.js"
+
 const posts = [
-    Macros,
-    Authority,
-    Active,
-    ECPPT,
-    F5,
-    SQL,
+    Macros
     ];
 
 
